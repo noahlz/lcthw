@@ -1,4 +1,4 @@
 lcthw
 =====
 
-Learn C the Hard Way
+Exercises from @zedshaw's Learn C the Hard Way
