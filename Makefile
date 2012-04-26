@@ -10,7 +10,7 @@ run:
 
 compile:
 	@echo "compiling $(NAME)..."
-	@$(CC) -g -o ./out/$(NAME) $(NAME).c
+	$(CC) -o ./out/$(NAME) $(NAME).c
 
 clean:
 	@echo "cleaning $(NAME)..."
