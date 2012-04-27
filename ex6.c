@@ -38,12 +38,28 @@ int main(int argc, char *argv[])
 	
 	// Print a number as an octal, hexidecimal and base 64.
 	int number = 3405691582;
-	printf("%1$d as octal = %1$o\n", number);
-	printf("%1$d as hexadecimal = %1$X\n", number);
+	printf("%1$d as octal = %1$#o\n", number);
+	printf("%1$d as hexadecimal = %1$#X\n", number);
 	// TODO: Base64, eh, seems like not possible with sprintf
+
+	// print float with a bunch of decimals
+	printf("%1$f formatted to 10 decimal places = %1$.10f\n", super_power);
+	
+	// printf returns an int
+	char * fmtstr = "%d\n";
+	puts("Check it out, printf() returns an int:");
+	printf(fmtstr, printf(fmtstr, printf(fmtstr, 10)));
 
 	// print empty string
 	printf("Printing an empty string: %s\n", "");
+
+	char * mystr = "%' '10.4f\n";
+	printf("Attempting to format float with %s", mystr);
+	// Discusion here: http://bit.ly/IdNaYt (cboard.cprogramming.com)
+	printf(mystr, 1002.0f);
+	printf(mystr, -99.48f);
+	printf(mystr, 1.00f);
+	printf(mystr, -power);    
 
 	return 0;
 }
