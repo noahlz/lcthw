@@ -1,6 +1,6 @@
 CFLAGS=-Wall -g
 CC=gcc
-NAME=ex6
+NAME=ex7
 RUNCMD=./out/$(NAME)
 
 all: clean compile
@@ -9,7 +9,6 @@ run:
 	@echo "********* RUNNING $(NAME) *********"  
 	@$(RUNCMD)	
 	@echo "********* ENDING  $(NAME) *********"
-
 compile:
 	@echo "compiling $(NAME)..."
 	$(CC) $(CFLAGS) -o $(RUNCMD) $(NAME).c 
@@ -21,3 +20,4 @@ clean:
 grind:
 	@echo "running with Valgrind..."
 	valgrind $(RUNCMD) 
+
