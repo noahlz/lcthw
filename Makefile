@@ -1,19 +1,23 @@
 CFLAGS=-Wall -g
 CC=gcc
 NAME=ex6
+RUNCMD=./out/$(NAME)
 
-all: clean compile run
+all: clean compile
 
 run:
 	@echo "********* RUNNING $(NAME) *********"  
-	@./out/$(NAME)	
+	@$(RUNCMD)	
 	@echo "********* ENDING  $(NAME) *********"
 
 compile:
 	@echo "compiling $(NAME)..."
-	$(CC) $(CFLAGS) -o ./out/$(NAME) $(NAME).c 
+	$(CC) $(CFLAGS) -o $(RUNCMD) $(NAME).c 
 
 clean:
 	@echo "cleaning $(NAME)..."
-	@rm -f ./out/$(NAME)
+	@rm -f $(RUNCMD) 
 
+grind:
+	@echo "running with Valgrind..."
+	valgrind $(RUNCMD) 
