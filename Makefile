@@ -9,6 +9,7 @@ run:
 	@echo "********* RUNNING $(NAME) *********"  
 	@$(RUNCMD)	
 	@echo "********* ENDING  $(NAME) *********"
+
 compile:
 	@echo "compiling $(NAME)..."
 	$(CC) $(CFLAGS) -o $(RUNCMD) $(NAME).c 
