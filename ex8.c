@@ -11,9 +11,10 @@ int main(int argc, char *argv[])
 		'S','h','a','w', '\0'
 	};
 	
-	char name[] = "Zed";
 	// Note: initializing with "Z\0ed" results in just "Z" being 
 	// printed everywhere. 
+	char name[] = "Zed";
+	
 	int areas[] = {10, 12, 13, 14, 20};
 	
 	// The below program prints the following:
@@ -73,8 +74,14 @@ int main(int argc, char *argv[])
 	puts("Assigning the first letter of name to the Z in full name...");
 	full_name[7] = name[0];
 	printf("full_name is now: %s\n", full_name); // Zed A. Zhaw
+
+	// 3) integer sizes on various CPUs
+	// See: http://www.oreillynet.com/network/2003/10/07/michael_barr.html
+	// - Motorola 68000 family: 16 bit = 65,536 unsigned values
+	// - Cobra (A10) processor: 48 bit = 281,474,976,710,656 unsigned values
+	// NOTE: The "^" operator is logical XOR. To calculate powers, you need
+	// the pow() function from <math.h>
 	
-		
 	////////////////////////////////////////////////////////////////
 	// End Extra Credit
 	
