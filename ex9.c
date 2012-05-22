@@ -71,6 +71,7 @@ int main(int argc, char *argv[])
 	// 	   numbers containing characters:
 	// 	   97 98 99 100
 	// (tried with %c format string too)
+	puts("\n** Extra Credit 1\n");
 	numbers[0] = 'a';
 	numbers[1] = 'b';
 	numbers[2] = 'c';
@@ -84,6 +85,7 @@ int main(int argc, char *argv[])
 	//     name containing numbers:
  	//     a b c d
  	// (tried with %i format string too)
+ 	puts("\n** Extra Credit 2\n");
 	name[0] = 97;
 	name[1] = 98;
 	name[2] = 99;
@@ -92,7 +94,7 @@ int main(int argc, char *argv[])
 			name[0], name[1], name[2], name[3]);
 
 	// 3) How many other ways can you print this out?
-	
+	puts("\n** Extra Credit 3\n");	
 	printf("name as octal:\n %o %o %o %o\n",
 			name[0], name[1], name[2], name[3]);
 
@@ -112,7 +114,7 @@ int main(int argc, char *argv[])
 	
 	// 4) If an array of characters is 4 bytes long, and an integer is 4 bytes
 	// long, then you can you treat the whole name array like it's an integer?
-	
+	printf("\n** Extra Credit 4\n");	
 	printf("size of name: %ld\n", sizeof(name));
 	
 	// This isn't the answer, it prints out a different value each run,
@@ -142,10 +144,19 @@ int main(int argc, char *argv[])
 	// 5) Take a piece of paper and draw out each of these arrays as a row of
 	// boxes. Then code the operations you just did on paper to see if you got
 	// them right.
-	
-	// 6) Convert name to be in the style of another and see if the code keeps
-	// working.
-
+	puts("\n** Extra Credit 5\n");
+	puts("(on paper)");
+    	
+	// 6) Convert name to be in the style of another and see if the code keeps working.
+	puts("\n** Extra Credit 6\n");
+	char * z = "Zed";
+	unsigned int znum;
+	znum = z[0] << 24;
+	znum = z[1] << 16 | znum;
+	znum = z[2] << 8 | znum;
+	znum = z[3] | znum;
+	printf("name in the style of another as Hexidecimal: %X\n", znum);
+	printf("name in the style of another as integer: %d\n", znum);
 
 	///////////////////////////////////////////////////////////////////////
 	// End extra credit
