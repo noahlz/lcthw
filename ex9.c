@@ -129,6 +129,8 @@ int main(int argc, char *argv[])
 	c[3] = '\0';
 	printf("chars as hex bytes: %X %X %X %X\n", c[0], c[1], c[2], c[3]);
 	// How to get these into an integer? Bitwise manipulation.
+	// Inspired by (not copied from) this StackOverflow question:
+	// http://stackoverflow.com/q/8173037/7507
 	unsigned int num;
 	num = c[0] << 24;
 	num = (c[1] << 16) | num;
