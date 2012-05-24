@@ -1,6 +1,6 @@
 CFLAGS=-Wall -g
 CC=gcc
-NAME=ex10
+NAME=ex11
 RUNCMD=./out/$(NAME)
 
 all: clean compile
