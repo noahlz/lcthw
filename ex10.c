@@ -22,18 +22,24 @@ int main(int argc, char *argv[])
 	int num_states = 4;
 	puts("Printing our own array of strings:");
 	for(i = 0; i < num_states; i++) {
-		printf("state %d: %s\n",i, states[i]);
+        char * state = states[i];
+		if('W' == *state) {
+			printf("Detected Washington. Exiting early (ex12 Extra Credit #3)\n");
+			break;
+		} else {
+			printf("state %d: %s\n",i, state);
+		}
 	}
 
 	////////////////////////////////////////////////////////////////////
-	// EXTRA CREDIT
+	printf("** EXTRA CREDIT\n");
 	
 	// 1) Figure out what kind of code you can put in the parts of a for-loop
 	
 	// 2) Look up how to use the comma character to separate multiple
 	// statements in parts of the for-loop.
 	// http://stackoverflow.com/q/276512/7507
-	puts("multiple initializers");
+	puts("Testing for statement with multiple initializers");
 	int j = 0;
 	for(i = 0, j = 100; i < num_states; i++, j += 5) {
 		printf("state %d: (%d) %s\n", i, j, states[i]);

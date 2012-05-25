@@ -6,6 +6,13 @@ int main(int argc, char *argv[])
 	
 	int i = 0;
 	while(i < argc)  {
+		char *arg = argv[i];
+		// Ex12 Extra Credit #3
+		if(*arg == 'Z') {
+			printf("Detected argument starting with 'Z'! ");
+			printf("Not printing any more command line arguments...\n");
+			break;
+		}
 		printf("arg %d: %s\n", i, argv[i]);
 		i++;
 	}
