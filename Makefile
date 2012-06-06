@@ -1,7 +1,8 @@
+CC=gcc # My cc is a symlink to gcc. See: http://stackoverflow.com/q/939989/7507
 CFLAGS=-Wall -g -std=c99
-CC=gcc
 NAME=ex14-extra
 RUNCMD=./out/$(NAME)
+MACRO=
 
 all: clean compile
 
@@ -12,7 +13,7 @@ run:
 
 compile:
 	@echo "compiling $(NAME)..."
-	$(CC) $(CFLAGS) -o $(RUNCMD) $(NAME).c 
+	$(CC) $(CFLAGS) $(MACRO) -o $(RUNCMD) $(NAME).c 
 
 clean:
 	@echo "cleaning $(NAME)..."
