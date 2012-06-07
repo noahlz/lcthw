@@ -1,6 +1,6 @@
 CC=gcc # My cc is a symlink to gcc. See: http://stackoverflow.com/q/939989/7507
 CFLAGS=-Wall -g -std=c99
-NAME=ex14-extra
+NAME=ex15
 RUNCMD=./out/$(NAME)
 MACRO=
 
