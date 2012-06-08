@@ -46,12 +46,17 @@ int main(int argc, char *argv[])
 			(cur_age - ages) < count; 
 			cur_name++, cur_age++)
 	{
+		
+		// NOTE: the addresses increment by 4
+		printf("** DEBUG: cur_age address (%d) - ages address (%d) = %d\n",
+					cur_age,
+					ages,
+					(cur_age - ages));
 		printf("%s lived %d years so far.\n",
 				*cur_name, *cur_age);
 	}
 
-	// "DON'T CONTINUE UNTIL YOU'VE WRITTEN DOWN WHAT YOU THINK 
-	// A POINTER DOES"
+	// "DON'T CONTINUE UNTIL YOU'VE WRITTEN DOWN WHAT YOU THINK A POINTER DOES"
 	// My answer: a pointer references the beginning of a region of memory.
 	// When you use the "array-style" syntax to access the data pointed to by 
 	// a pointer, you are indicating the offset from that starting point.
@@ -59,6 +64,7 @@ int main(int argc, char *argv[])
 	// memory address) to start at a new location. The offset of the location
 	// is a modulus of the size of the memory block (not sure what that means
 	// for char* though, as the memory that they point to is variable length!)
+	// Possible answer - that's why strings are \0 terminated.
 
 	return 0;
 }
